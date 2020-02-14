@@ -1,0 +1,11 @@
+.customer{
+
+    background-color: teal;
+    border : 2px solid blue;
+    min-width: 300px;
+    min-height: 75px;
+    border-radius: 15px;
+    margin: 7px;
+    padding: 7px;
+
+}

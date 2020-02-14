@@ -1,0 +1,150 @@
+##how to create a react application:
+
+    step 1: npm install -g create-react-app
+
+    step 2: create-react-app app-name
+
+or
+
+    npx create-react-app app-name
+
+##links of CDN required for React Application:
+
+    script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+
+
+## Public - static contents
+          - index.html
+
+## index.js is the first file to execute 
+    ReactDOM.render(<App />, document.getElementById('root'));
+    serviceWorker.unregister();
+
+## App component is the root component    
+
+
+## Project execution:
+    npm start 
+    ==> react-script-start 
+    ===> babel compiler  
+    ===> complies to ES5 code by babel compiler
+    ===> Web pack === > Bundles all the files
+       ===> injects the script reference in index.html file
+
+eg. <script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js">
+
+    npm build  == > production build
+
+               THE COMPONENT
+
+                props/state
+
+            JSX code/ UI component
+
+                    Logic
+
+
+## Types : 1. Class based  --> Containers, Stateful
+           2. Functional --> stateless component, usually presentational
+
+## Standard HTML elements will be lowered case always.
+## Custom Components should always be UpperCase.
+
+The syntax:
+
+ {expresion : javascript goes here}
+
+2/11/2020:
+
+## events in react are camel case 
+and we dont call the function, just provide the name of function.
+
+## Mulitple constructors are not allowed as it will be an override.
+## super() should be called with the props.
+
+## use setState() to update the state of a component.
+    //this.setState(newState, callback_function)
+    //it is invoked Async
+    this.setState({
+      count : updatedCount
+      },()=>{
+            console.log("state Count", this.state.count)
+     })
+
+     setState will reRender the component
+##Never call setstate in constructor   
+
+###how to call method in parent from child.
+
+    step1: create method in parent
+    step2: pass method to child via props
+    step3: create a function which calls parent method via props
+    step4: call child method in child event.
+
+
+## Pass an key field to a component
+
+## prop Types  --> for type checking
+
+## what are promises and observables ? also check xsrf tokens and more information
+
+Consolas, 'Courier New', monospace size 14.
+
+## //destructuring
+
+//ES6
+
+    var obj ={
+        id: 10,
+        name:avinash
+    }
+
+    var id = obj.id;
+    var name =obj.name;
+
+    //destructuring for object
+    const {id, name} = obj;
+
+    var array = [1, "mumbai"];
+
+    const [code,city] = array;
+    // now code will be 1 and city will be mumbai
+
+## redux is dependency for redux
+## rect-redux is connector between react and redux
+## Provider is important component in redux, it is not an HOC.
+## Wrap App component inside Provider component and pass the store as a prop.    
+## Connect() is a function which returns a HOC, for connecting redux with react component
+
+##  //Maps redux state to component props
+        const mapStateToProps = ()=>{
+
+        }
+
+## Action Creators functions to create Actions to be dispatched
+
+## Middlewares  - to intercept the actions before it is processed by the reducer
+                - Async behavior - 1.redux-thunk 2. Redux-saga
+
+
+refernces:
+https://reacttraining.com/react-router/web/guides/quick-start
+
+
+## TO GO THROUGH AGAIN
+
+useCallBack(()=>{},[])
+const [count, dispatch]= useReducer((state,action)=>{
+    return state;
+})
+useMemo
+
+## Material UI
+## BootStrap
+## Reactstrap
+## SemanticUI
+## PrimeNg
+
+

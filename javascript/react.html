@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>React Application</h2>
+    <div id="app1"></div>
+    <div id="app2"></div>
+    <div id="app3"></div>
+
+    <script type="text/babel">
+        // create element p1- element you want to create
+        //p2 - Any attributes for the elements
+        //p3 - content
+        // const element = React.createElement("h4",null,
+        //                                     "This is a React Element")
+
+        const element = React.createElement("h4", null,
+            React.createElement("p", null, "This is a React Element"));
+        ReactDOM.render(element, document.getElementById("app1"));
+
+        // Using JSX
+        ReactDOM.render(<h4><p> This is React JSX </p></h4>, document.getElementById("app2"))
+
+        //Re-Usable
+        const MyComponent = function () {
+            return <h4><p> This is my React Component</p></h4>;
+        }
+
+        ReactDOM.render(<MyComponent />, document.getElementById("app3"))
+
+    </script>
+</body>
+
+</html>
